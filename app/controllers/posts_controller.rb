@@ -11,17 +11,7 @@ class PostsController < ApplicationController
 		@post = Post.new
 	end
 
-	def create
-	  @post = Post.new(params["post"])
-	  @post.save
-	  redirect_to post_path(@post)
-	end
-
-	def update
-	  @post = Post.find(params[:id])
-	  @post.update(params["post"])
-	  redirect_to post_path(@post)
-	end
+	
 
 	def edit
 	  @post = Post.find(params[:id])
